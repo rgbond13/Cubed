@@ -30,7 +30,13 @@ public class UIManager : MonoBehaviour
     {
         CloseMenu(mainMenu);
         OpenMenu(settings);
-        
+    }
+
+    void CloseClicked()
+    {
+        CloseMenu(settings);
+        CloseMenu(loadMenu);
+        OpenMenu(mainMenu);
     }
 
     private void CloseMenu(GameObject[] menu)
