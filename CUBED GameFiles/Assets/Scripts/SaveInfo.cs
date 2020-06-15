@@ -6,13 +6,13 @@ using TMPro;
 
 public class SaveInfo : MonoBehaviour
 {
-    Text usertext;
+    public TextMeshProUGUI usertext;
 
     private void SetUsername()
     {
-        usertext = gameObject.GetComponent<Text>();
+        usertext = gameObject.GetComponent<TextMeshProUGUI>();
 
-        string username = usertext.text.ToString();
+        string username = usertext.text;
         PlayerPrefs.SetString("username", username);
         PlayerPrefs.Save();
     }

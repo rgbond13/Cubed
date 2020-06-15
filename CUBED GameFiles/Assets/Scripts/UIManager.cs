@@ -57,4 +57,14 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    void LoadWorld()
+    {
+        ChangeScene.LoadGame();
+    }
+
+    void GenerateWorld()
+    {
+        LoadWorld();
+    }
 }
