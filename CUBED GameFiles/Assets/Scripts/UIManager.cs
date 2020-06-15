@@ -20,10 +20,8 @@ public class UIManager : MonoBehaviour
 
     void StartClicked()
     {
-        Debug.Log("Started");
         CloseMenu(mainMenu);
         OpenMenu(loadMenu);
-        Debug.Log("Arrived here");
     }
 
     void SettingsClicked()
@@ -53,5 +51,20 @@ public class UIManager : MonoBehaviour
         {
             widget.SetActive(true);
         }
+    }
+
+    private void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    void LoadWorld()
+    {
+        ChangeScene.LoadGame();
+    }
+
+    void GenerateWorld()
+    {
+        LoadWorld();
     }
 }
