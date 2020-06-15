@@ -62,10 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MouseManager.cs" />
+    <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\Pickaxe.cs" />
     <Compile Include="Assets\Scripts\SaveInfo.cs" />
+    <Compile Include="Assets\Scripts\TileManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\UserPrint.cs" />
+    <Compile Include="Assets\Scripts\UserPrint.cs" />
+    <Compile Include="Assets\Scripts\WorldGeneration.cs" />
+    <Compile Include="Assets\WorldGenAnchor.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
