@@ -18,13 +18,21 @@ public class TileManager : MonoBehaviour
         hitBox = GetComponent<CircleCollider2D>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        hitPoints -= collision.gameObject.GetComponent<Pickaxe>().GetPower();
+        //hitPoints -= collision.gameObject.GetComponent<Pickaxe>().GetPower();
+        
+    }
+
+    public void DamageBlock(int damage)
+    {
+        hitPoints -= damage;
+
         if (hitPoints <= 0)
         {
             Destroy(gameObject);
             Instantiate(drops[tile], transform);
         }
     }
+
 }

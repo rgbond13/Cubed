@@ -23,7 +23,8 @@ public class WorldGeneration : MonoBehaviour
     {
         Time.timeScale = 0;
         transform.position = new Vector3(-(worldSize/2), worldHeight);
-        StartCoroutine("WorldGenerator"); 
+        StartCoroutine("WorldGenerator");
+        Debug.Log("Continuing Routine");
     }
 
     IEnumerator WorldGenerator()
@@ -36,17 +37,17 @@ public class WorldGeneration : MonoBehaviour
                 if (yLoc <= underWorldHeight)
                 {
                     tileType = 2;
-                    Debug.Log("Underworld");
+                    //Debug.Log("Underworld");
                 }
                 else if (yLoc <= mineHeight)
                 {
                     tileType = 1;
-                    Debug.Log("Mine");
+                    //Debug.Log("Mine");
                 }
                 else
                 {
                     tileType = 0;
-                    Debug.Log("Snow");
+                    //Debug.Log("Snow");
                 }
 
                 // World Generator
@@ -68,9 +69,12 @@ public class WorldGeneration : MonoBehaviour
             yLoc = 0f;
             xLoc++;
             transform.position = new Vector3(transform.position.x + 1, -worldHeight);
+            //Debug.Log("Resetting Position");
         }
+        //Debug.Log("Exiting world Gen");
         yield return 1;
         Time.timeScale = 1;
+        //Debug.Log("Exited");
     }
 
     public int GetWorldSize()
