@@ -7,8 +7,6 @@ public class MouseManager : MonoBehaviour
 {
     public GameObject player;
     bool pickaxeActive = true;
-    RaycastHit hit;
-    public LayerMask tiles;
     BoxCollider2D bcollider;
     float timer = 0f;
 
@@ -26,28 +24,29 @@ public class MouseManager : MonoBehaviour
 
         transform.position = mouse;
 
-        Ray blockRaycast = new Ray(Camera.main.transform.position, mouse - Camera.main.transform.position);
+        //Ray blockRaycast = new Ray(Camera.main.transform.position, mouse - Camera.main.transform.position);
 
-        if (Physics.Raycast(blockRaycast, out hit, 25))
-        {
-            if (hit.collider.gameObject.tag == "Tile")
-            {
-                Debug.Log("Tile Hit");
-            }
-            else
-            {
-                Debug.Log("Hit");
-            }
-            Debug.Log(hit.collider.gameObject.tag);
-        }
-        else
-        {
-            Debug.Log("No RaycastHit");
-        }
-        Debug.DrawLine(Camera.main.transform.position, mouse - Camera.main.transform.position, Color.green);
+        //if (Physics.Raycast(blockRaycast, out hit, 25))
+        //{
+        //    if (hit.collider.gameObject.tag == "Tile")
+        //    {
+        //        Debug.Log("Tile Hit");
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("Hit");
+        //    }
+        //    Debug.Log(hit.collider.gameObject.tag);
+        //}
+        //else
+        //{
+        //    Debug.Log("No RaycastHit");
+        //}
+        //Debug.DrawLine(Camera.main.transform.position, mouse - Camera.main.transform.position, Color.green);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("Collision");
         if (Input.GetKey(KeyCode.Mouse0))
@@ -70,13 +69,8 @@ public class MouseManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         timer = 0f;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Enter Collision");
     }
 }

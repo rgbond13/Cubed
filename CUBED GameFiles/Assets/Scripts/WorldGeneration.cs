@@ -27,6 +27,7 @@ public class WorldGeneration : MonoBehaviour
         Debug.Log("Continuing Routine");
     }
 
+
     IEnumerator WorldGenerator()
     {
         while (transform.position.x <= worldSize/2)
