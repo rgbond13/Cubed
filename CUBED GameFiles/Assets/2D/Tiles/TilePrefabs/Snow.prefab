@@ -1,49 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4275606363663581256
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5635114112188950188}
-  - component: {fileID: 5046225015569600866}
-  m_Layer: 0
-  m_Name: RaycastCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5635114112188950188
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4275606363663581256}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -731.49, y: -5.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 359522094704310003}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5046225015569600866
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4275606363663581256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.020987615}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5345748432334633768
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +12,7 @@ GameObject:
   - component: {fileID: 742985823837649204}
   - component: {fileID: 2265135023096248602}
   - component: {fileID: 4975155422634096218}
-  - component: {fileID: 2883570306491450476}
+  - component: {fileID: 8436658160995601428}
   m_Layer: 8
   m_Name: Snow
   m_TagString: Tile
@@ -72,10 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5345748432334633768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -731.49, y: -3.5, z: 0}
+  m_LocalPosition: {x: -731.501, y: -3.5, z: 0}
   m_LocalScale: {x: 0.92, y: 0.92, z: 1}
-  m_Children:
-  - {fileID: 5635114112188950188}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -169,8 +124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: 0
   tileBreakTime: 20
---- !u!58 &2883570306491450476
-CircleCollider2D:
+  drop: {fileID: 3618812169780896106, guid: 6e2b383b324d1624f826c7674265a3fb, type: 3}
+--- !u!61 &8436658160995601428
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -183,5 +139,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.09, y: 1.09}
+    newSize: {x: 1.09, y: 1.09}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.545
+  m_Size: {x: 1.09, y: 1.09}
+  m_EdgeRadius: 0

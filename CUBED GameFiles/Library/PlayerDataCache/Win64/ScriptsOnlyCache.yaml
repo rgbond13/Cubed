@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ChangeScene
+    - DroppedTileManager
     - MouseManager
     - Pickaxe
     - PlayerController
@@ -76,17 +77,19 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11404}
     - Class: 114
-      Script: {instanceID: 12194}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 12630}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 13030}
+      Script: {instanceID: 12990}
+    - Class: 114
+      Script: {instanceID: 13032}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -135,35 +138,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11412}
     - Class: 114
-      Script: {instanceID: 11432}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11616}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 11846}
+      Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12464}
+      Script: {instanceID: 12466}
     - Class: 114
-      Script: {instanceID: 12478}
+      Script: {instanceID: 12480}
     - Class: 114
-      Script: {instanceID: 12584}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12682}
+      Script: {instanceID: 12684}
     - Class: 114
-      Script: {instanceID: 12750}
+      Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 12854}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 13124}
     - Class: 114
-      Script: {instanceID: 13148}
+      Script: {instanceID: 13150}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -259,6 +262,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 24b63b3575e885261c9ce0fbcb576321
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DroppedTileManager
   - hash:
       serializedVersion: 2
       Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
@@ -561,7 +570,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: a1e8381535eb4ce427c99cb957c7ed7a
+      Hash: d3fb0b9b9f0ad02b8c09ab81755b7b33
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TileManager
