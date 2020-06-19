@@ -151,3 +151,4 @@ MonoBehaviour:
   tileInstance: {fileID: 1627056998772710597}
   tileName: Dirt
   active: 1
+  worth: 1

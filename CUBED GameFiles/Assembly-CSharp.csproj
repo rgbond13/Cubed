@@ -65,7 +65,6 @@
     <Compile Include="Assets\Scripts\2D Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\2D Scripts\DroppedTileManager.cs" />
     <Compile Include="Assets\Scripts\2D Scripts\MouseManager.cs" />
-    <Compile Include="Assets\Scripts\2D Scripts\Pickaxe.cs" />
     <Compile Include="Assets\Scripts\2D Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\2D Scripts\SaveInfo.cs" />
     <Compile Include="Assets\Scripts\2D Scripts\TileManager.cs" />
@@ -74,9 +73,12 @@
     <Compile Include="Assets\Scripts\2D Scripts\WorldGenAnchor.cs" />
     <Compile Include="Assets\Scripts\2D Scripts\WorldGeneration.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\CameraManager.cs" />
+    <Compile Include="Assets\Scripts\3D Scripts\DroppedVoxelManager.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\MouseVoxelManager.cs" />
+    <Compile Include="Assets\Scripts\3D Scripts\VoxelManager.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\WorldRenderer.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\WorldRendererAnchor.cs" />
+    <Compile Include="Assets\Scripts\Pickaxe.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7419335883794610268}
   - component: {fileID: 8738848699641236218}
   - component: {fileID: 1946994888014202707}
+  - component: {fileID: 5009500778029831138}
   m_Layer: 0
   m_Name: Dirt
   m_TagString: Tile
@@ -107,3 +108,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5009500778029831138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3047442386838994660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab183bff1d7ffac4e9dfc9c61c00ad8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile: 1
+  tileBreakTime: 30
+  drop: {fileID: 2988319848467489645, guid: 085e1316ebe8f01409acc510ee8eef08, type: 3}

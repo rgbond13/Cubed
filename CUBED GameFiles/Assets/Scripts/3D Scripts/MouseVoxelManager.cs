@@ -27,15 +27,23 @@ public class MouseVoxelManager : MonoBehaviour
 
         if (Physics.Raycast(blockRaycast, out hit, 15))
         {
-            if (hit.collider.gameObject.tag == "Tile")
+            if (Input.GetKey(KeyCode.Mouse0))
             {
-                Debug.Log("Tile Hit");
+                if (hit.collider.gameObject.tag == "Tile")
+                {
+                    int power = player.GetComponentInChildren<Pickaxe>().GetPower();
+
+                    hit.collider.gameObject.GetComponent<VoxelManager>().DamageBlock(power);
+                    //Debug.Log("Block Damaged");
+                    timer = 0.3f;
+                }
+                else
+                {
+                    Debug.Log("Hit");
+                }
+                Debug.Log(hit.collider.gameObject.tag);
             }
-            else
-            {
-                Debug.Log("Hit");
-            }
-            Debug.Log(hit.collider.gameObject.tag);
+            
         }
         else
         {

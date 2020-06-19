@@ -9,13 +9,13 @@ public class TileManager : MonoBehaviour
     
     int hitPoints;
 
-    CircleCollider2D hitBox;
+    BoxCollider2D hitBox;
     public GameObject drop;
 
     void Start()
     {
         hitPoints = tileBreakTime;
-        hitBox = GetComponent<CircleCollider2D>();
+        hitBox = GetComponent<BoxCollider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 817650828953279940}
   - component: {fileID: 8540697565245707651}
   - component: {fileID: 1342054454037933696}
+  - component: {fileID: 306518406082359771}
   m_Layer: 0
   m_Name: Bedrock
   m_TagString: Tile
@@ -107,3 +108,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &306518406082359771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434463949189595337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab183bff1d7ffac4e9dfc9c61c00ad8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile: 2
+  tileBreakTime: 150
+  drop: {fileID: 4906032502486929048, guid: adc96cce0b684314bafe34f9af6d7bc6, type: 3}
