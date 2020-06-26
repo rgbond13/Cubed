@@ -5,6 +5,7 @@ using UnityEngine;
 public class DroppedVoxelManager : MonoBehaviour
 {
     public GameObject tileInstance;
+    public GameObject worldRenderer;
     int tilecount = 1;
     public string tileName;
     public bool active = true;
@@ -13,13 +14,16 @@ public class DroppedVoxelManager : MonoBehaviour
     void Start()
     {
         Debug.Log("Tilecount: " + tilecount);
-        if (tilecount == 0) { }
+        if (tilecount == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!worth)
+        if (!worth || transform.position.y < -worldRenderer.GetComponentInChildren<WorldRenderer>().GetWorldSize().y)
         {
             Destroy(gameObject);
         }
@@ -30,54 +34,20 @@ public class DroppedVoxelManager : MonoBehaviour
         Debug.Log("Tile Collided");
         if (collision.gameObject.tag == "TileDrop")
         {
-            Debug.Log("With another tile.");
-            string collisionTileName = collision.gameObject.GetComponent<DroppedVoxelManager>().tileName;
+            MergeTiles(collision);
+        }
 
-
-            if (collisionTileName == tileName && tilecount < 99)
-            {
-                Debug.Log("Deciding which tile is in charge");
-                if (Random.Range(1, 2) == 1)
-                {
-                    collision.gameObject.GetComponent<DroppedVoxelManager>().active = false;
-                    Debug.Log("Case1");
-                }
-                if (collision.gameObject.GetComponent<DroppedVoxelManager>().active == true && active == true)
-                {
-                    active = false;
-                    Debug.Log("Case2");
-                    return;
-                }
-                else if (collision.gameObject.GetComponent<DroppedVoxelManager>().active == false && active == false)
-                {
-                    active = true;
-                    Debug.Log("Case3");
-                }
-
-                if (!active)
-                {
-                    return;
-                }
-
-                Debug.Log(tileName);
-
-                Debug.Log("Merging tiles");
-
-                int newTileCount = collision.gameObject.GetComponent<DroppedVoxelManager>().GetTileCount() + tilecount;
-                GameObject tile = Instantiate(tileInstance, transform.position, transform.rotation) as GameObject;
-                tile.gameObject.GetComponent<DroppedVoxelManager>().AddTileCount(-1);
-                tile.gameObject.GetComponent<DroppedVoxelManager>().AddTileCount(newTileCount);
-                collision.gameObject.GetComponent<DroppedVoxelManager>().worth = false;
-                return;
-            }
+        if (collision.gameObject.tag == "Player")
+        {
+            AddToPlayerInventory();
         }
     }
 
     private void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.tag == "TileDrop")
+        if (collision.gameObject.tag == "Pointer")
         {
-            Debug.Log("A tile's tilecount is: " + collision.gameObject.GetComponent<DroppedVoxelManager>().GetTileCount());
+            Debug.Log("A tile's tilecount is: " + GetTileCount());
         }
     }
 
@@ -89,6 +59,84 @@ public class DroppedVoxelManager : MonoBehaviour
     public void AddTileCount(int tiles)
     {
         tilecount += tiles;
+    }
+
+    // This method regulates the tile combining
+    private void MergeTiles(Collision collision)
+    {
+        Debug.Log("With another tile.");
+        string collisionTileName = collision.gameObject.GetComponent<DroppedVoxelManager>().tileName;
+
+        if (tilecount >= 99)
+        {
+            collision.gameObject.GetComponent<DroppedVoxelManager>().AddTileCount(tilecount - 99);
+            AddTileCount(99 - tilecount);
+            return;
+        }
+        else if (collision.gameObject.GetComponent<DroppedVoxelManager>().GetTileCount() >= 99)
+        {
+            return;
+        }
+        else if (collisionTileName == tileName && tilecount < 99)
+        {
+            if (tilecount > collision.gameObject.GetComponent<DroppedVoxelManager>().GetTileCount())
+            {
+                active = true;
+            }
+            else if (tilecount == collision.gameObject.GetComponent<DroppedVoxelManager>().GetTileCount())
+            {
+                while (collision.gameObject.GetComponent<DroppedVoxelManager>().active == active)
+                {
+                    if (Random.Range(1, 3) == 1)
+                    {
+                        Debug.Log("Case1");
+                        active = false;
+                        return;
+                    }
+                    else
+                    {
+                        active = true;
+                    }
+                }
+            }
+            else
+            {
+                active = false;
+            }
+
+            Debug.Log("Decided which tile is in charge");
+
+            if (!active)
+            {
+                Debug.Log("Not active");
+                return;
+            }
+
+            else
+            {
+                active = false;
+            }
+            Debug.Log(tileName);
+
+            //Debug.Log("Merging tiles");
+
+            int newTileCount = collision.gameObject.GetComponent<DroppedVoxelManager>().GetTileCount();
+
+            //Debug.Log("Got tiles");
+            AddTileCount(newTileCount);
+            //Debug.Log("Added tiles");
+            collision.gameObject.GetComponent<DroppedVoxelManager>().worth = false;
+            //Debug.Log("Destroyed other tile");
+            active = true;
+            return;
+        }
+    }
+
+
+    // This method regulates the adding of the tiles to the player's inventory.
+    private void AddToPlayerInventory()
+    {
+
     }
 
 

@@ -54,7 +54,7 @@ public class MouseVoxelManager : MonoBehaviour
     }
 
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay(Collider collision)
     {
         //Debug.Log("Collision");
         if (Input.GetKey(KeyCode.Mouse0))
@@ -77,12 +77,12 @@ public class MouseVoxelManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         timer = 0f;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "TileDrop")
         {

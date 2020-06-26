@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5804527851982069969}
   - component: {fileID: 2867573162894513336}
   - component: {fileID: 3513091353601614580}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BedrockDrop
   m_TagString: TileDrop
   m_Icon: {fileID: 0}
@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileInstance: {fileID: 4906032502486929048}
+  worldRenderer: {fileID: 2856146123410784357, guid: 71105a332c575984691cebb5f0c2cc14,
+    type: 3}
   tileName: Bedrock
   active: 1
   worth: 1

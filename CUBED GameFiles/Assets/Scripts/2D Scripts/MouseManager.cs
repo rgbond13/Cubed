@@ -7,12 +7,14 @@ public class MouseManager : MonoBehaviour
 {
     public GameObject player;
     bool pickaxeActive = true;
+    public Texture2D cursor;
     BoxCollider2D bcollider;
     float timer = 0f;
 
     void Start()
     {
         bcollider = GetComponent<BoxCollider2D>();
+        Cursor.SetCursor(cursor, new Vector2(16, 16), CursorMode.ForceSoftware);
     }
 
     // Update is called once per frame
@@ -74,7 +76,7 @@ public class MouseManager : MonoBehaviour
         timer = 0f;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "TileDrop")
         {

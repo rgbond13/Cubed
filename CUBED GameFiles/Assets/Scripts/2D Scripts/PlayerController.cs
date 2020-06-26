@@ -32,16 +32,20 @@ public class PlayerController : MonoBehaviour
         hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.down, 2.0f);
         Debug.DrawRay(new Vector2(transform.position.x, transform.position.y), Vector3.down, Color.green);
 
-        if (hit.collider.gameObject.name == null)
+        string objectName;
+        try
+        {
+            objectName = hit.collider.gameObject.name;
+            touchingGround = true;
+            Debug.Log("Touching Ground");
+        }
+        catch (System.NullReferenceException)
         {
             touchingGround = false;
+            Debug.Log("Not touching ground");
         }
-        else if (hit.collider.gameObject.tag == "Tile")
-        {
-            touchingGround = true;
-        }
-        Debug.Log(hit.collider.gameObject.name);
-        Debug.Log(touchingGround);
+        //Debug.Log(hit.collider.gameObject.name);
+        //Debug.Log(touchingGround);
 
         Vector3 moveVector = new Vector3(horiz, rb.velocity.y);
 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6296277009229189298}
   - component: {fileID: 4506945052311709750}
   - component: {fileID: 7365706623062328824}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DirtDrop
   m_TagString: TileDrop
   m_Icon: {fileID: 0}
@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileInstance: {fileID: 2988319848467489645}
+  worldRenderer: {fileID: 2856146123410784357, guid: 71105a332c575984691cebb5f0c2cc14,
+    type: 3}
   tileName: Dirt
   active: 1
   worth: 1

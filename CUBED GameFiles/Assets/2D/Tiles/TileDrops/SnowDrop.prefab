@@ -171,5 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileInstance: {fileID: 3618812169780896106}
+  worldGenerator: {fileID: 4407549091463827996, guid: 54b6a3f05549d554f9c448faa94bbdac,
+    type: 3}
   tileName: Snow
   active: 1
+  worth: 1

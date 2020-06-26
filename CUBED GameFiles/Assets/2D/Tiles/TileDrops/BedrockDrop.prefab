@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8311595522019738140}
   - component: {fileID: 6396866972139148669}
   - component: {fileID: 6746898323017938675}
+  - component: {fileID: 7935430299607273257}
   m_Layer: 8
   m_Name: BedrockDrop
   m_TagString: TileDrop
@@ -149,5 +150,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileInstance: {fileID: 1646738546073338930}
+  worldGenerator: {fileID: 4407549091463827996, guid: 54b6a3f05549d554f9c448faa94bbdac,
+    type: 3}
   tileName: Bedrock
   active: 1
+  worth: 1
+--- !u!50 &7935430299607273257
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646738546073338930}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3616450901747210232}
   - component: {fileID: 5608391626769656246}
   - component: {fileID: 8377431711213834855}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849249101463852333}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7238320315949456601}
   - component: {fileID: 2482203024147393499}
   - component: {fileID: 2758143061062982340}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921670881892264895}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 5674331807391231517}
   - component: {fileID: 351125967101561797}
   - component: {fileID: 5559787845929458281}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260546152332699146}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 2426180908695382756}
   - component: {fileID: 3647112973134289868}
   - component: {fileID: 7752670173245401647}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6126707356567922726}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -389,7 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988505494636757240}
   - component: {fileID: 8228028944583401447}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PickaxePivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
