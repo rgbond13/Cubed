@@ -1,2 +1,2 @@
 # Cubed
-Fun Awesome Game for 10 Bucks!
+Fun Awesome Game for 10 Bucks! Very Fun!
