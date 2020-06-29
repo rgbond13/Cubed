@@ -75,9 +75,11 @@
     <Compile Include="Assets\Scripts\3D Scripts\CameraManager.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\DroppedVoxelManager.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\MouseVoxelManager.cs" />
+    <Compile Include="Assets\Scripts\3D Scripts\PlayerController3D.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\VoxelManager.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\WorldRenderer.cs" />
     <Compile Include="Assets\Scripts\3D Scripts\WorldRendererAnchor.cs" />
+    <Compile Include="Assets\Scripts\HUDController.cs" />
     <Compile Include="Assets\Scripts\Pickaxe.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

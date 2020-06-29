@@ -1,41 +1,26 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ChangeScene
-    - DroppedTileManager
-    - MouseManager
+    - CameraManager
+    - DroppedVoxelManager
+    - MouseVoxelManager
     - Pickaxe
-    - PlayerController
-    - SaveInfo
-    - TileManager
-    - UIManager
-    - UserPrint
-    - WorldGenAnchor
-    - WorldGeneration
+    - VoxelManager
+    - WorldRenderer
+    - WorldRendererAnchor
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
-    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-    UnityEngine.UI.dll:
-    - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
-    - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
-    - UnityEngine.UI.RectMask2D
-    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/2D Game.unity:
+    Assets/Scenes/3D Game.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -54,76 +39,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 50
+    - Class: 49
       Script: {instanceID: 0}
-    - Class: 58
-      Script: {instanceID: 0}
-    - Class: 60
-      Script: {instanceID: 0}
-    - Class: 61
+    - Class: 54
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
-    - Class: 70
-      Script: {instanceID: 0}
     - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11404}
-    - Class: 114
-      Script: {instanceID: 11664}
-    - Class: 114
-      Script: {instanceID: 12196}
-    - Class: 114
-      Script: {instanceID: 12632}
-    - Class: 114
-      Script: {instanceID: 12800}
-    - Class: 114
-      Script: {instanceID: 12990}
-    - Class: 114
-      Script: {instanceID: 13032}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 258
-      Script: {instanceID: 0}
-    Assets/Scenes/Title Screen 2D.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -132,56 +54,38 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11184}
+      Script: {instanceID: 11850}
     - Class: 114
-      Script: {instanceID: 11370}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 11412}
+      Script: {instanceID: 12470}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 11616}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 12806}
     - Class: 114
-      Script: {instanceID: 11848}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 12924}
     - Class: 114
-      Script: {instanceID: 12466}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 12480}
-    - Class: 114
-      Script: {instanceID: 12586}
-    - Class: 114
-      Script: {instanceID: 12684}
-    - Class: 114
-      Script: {instanceID: 12752}
-    - Class: 114
-      Script: {instanceID: 12856}
-    - Class: 114
-      Script: {instanceID: 12916}
-    - Class: 114
-      Script: {instanceID: 13124}
-    - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 13212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -264,7 +168,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 24b63b3575e885261c9ce0fbcb576321
+      Hash: 395b252191b2d9108ee0580b6734f99a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DroppedTileManager
@@ -316,6 +220,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraManager
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -414,6 +324,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 5071baadd66eda92b1c96118c9eb4bf0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DroppedVoxelManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -438,7 +354,7 @@ ScriptsOnlyBuild:
     className: IgnoreSnap
   - hash:
       serializedVersion: 2
-      Hash: 83e769eee07fc231384c812eedbb8224
+      Hash: 344a27d06cd591478214363bbfa8c68b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MouseManager
@@ -516,6 +432,12 @@ ScriptsOnlyBuild:
     className: ChangeScene
   - hash:
       serializedVersion: 2
+      Hash: c3f6d249275d0162bd41796618fdfd36
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WorldRenderer
+  - hash:
+      serializedVersion: 2
       Hash: 63b164684222b5e364f7f16586e55edd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -564,10 +486,22 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WorldRendererAnchor
+  - hash:
+      serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 25607e42ed6f516ba75be5566117314a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseVoxelManager
   - hash:
       serializedVersion: 2
       Hash: d3fb0b9b9f0ad02b8c09ab81755b7b33
@@ -682,8 +616,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d3fb0b9b9f0ad02b8c09ab81755b7b33
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VoxelManager
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Title Screen 2D.unity
-  - Assets/Scenes/2D Game.unity
+  - Assets/Scenes/3D Game.unity
   playerPath: F:/A Unity Documents Folder/Unity Games/Executables/Quick Test Run/CUBED.exe

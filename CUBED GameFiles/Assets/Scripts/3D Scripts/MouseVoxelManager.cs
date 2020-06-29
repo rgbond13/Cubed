@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class MouseVoxelManager : MonoBehaviour
 {
+    public GameObject[] placeableTiles;
+    public GameObject placeLoc;
     public GameObject player;
+    public LayerMask tiles;
     bool pickaxeActive = true;
     BoxCollider bcollider;
     float timer = 0f;
@@ -43,11 +46,20 @@ public class MouseVoxelManager : MonoBehaviour
                 }
                 Debug.Log(hit.collider.gameObject.tag);
             }
+
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                Debug.Log("Prepare to place tile");
+                if (hit.collider.gameObject.tag == "Tile")
+                {
+                    PlaceBlock(hit.point, hit);
+                }
+            }
             
         }
         else
         {
-            Debug.Log("No RaycastHit");
+            //Debug.Log("No RaycastHit");
         }
 
         Debug.DrawRay(mainCamera.transform.position, transform.position - mainCamera.transform.position, Color.green);
@@ -87,6 +99,24 @@ public class MouseVoxelManager : MonoBehaviour
         if (collision.gameObject.tag == "TileDrop")
         {
             Debug.Log("A tile's tilecount is: " + collision.gameObject.GetComponent<DroppedTileManager>().GetTileCount());
+        }
+    }
+
+    private void PlaceBlock(Vector3 contact, RaycastHit hit)
+    {
+        Debug.Log("Before Rounding: " + contact);
+        contact = new Vector3(Mathf.RoundToInt(contact.x), Mathf.RoundToInt(contact.y), Mathf.RoundToInt(contact.z));
+        Debug.Log("Rounded RaycastHit.Point");
+        Debug.Log("Contact: " + contact + "\nHit.collider.gameObject.transform.position: " + hit.collider.gameObject.transform.position);
+        
+        placeLoc.transform.position = contact;
+        
+        if (Physics.OverlapBox(contact, hit.transform.localScale / 2, Quaternion.identity, tiles).Length == 0)
+        {
+            Debug.Log("Created Tile");
+            GameObject voxel = Instantiate(placeableTiles[3], placeLoc.transform) as GameObject;
+            voxel.transform.parent = null;
+            Debug.Log("Contact point: " + contact);
         }
     }
 }

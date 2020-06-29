@@ -7,9 +7,6 @@ public class WorldRenderer : MonoBehaviour
     public GameObject[] blocks;
     public Transform startLoc;
     public Vector3 worldSize;
-    //public int worldHeight;
-    //public int worldWidth;
-    //public int worldLength;
     public Vector3 chunkSize;
     
     GameObject tile;
@@ -29,7 +26,7 @@ public class WorldRenderer : MonoBehaviour
         Time.timeScale = 0; 
         transform.position = new Vector3(-worldSize.x + 1, -worldSize.y, -worldSize.z);
         StartCoroutine("WorldGenerator");
-        Debug.Log("Continuing Routine");
+        //Debug.Log("Continuing Routine");
     }
 
 
@@ -93,10 +90,10 @@ public class WorldRenderer : MonoBehaviour
         }
         
 
-        Debug.Log("Exiting world Gen");
+        //Debug.Log("Exiting world Gen");
         yield return 1;
         Time.timeScale = 1;
-        Debug.Log("Exited");
+        //Debug.Log("Exited");
     }
 
     public Vector3 GetWorldSize()
